@@ -1,6 +1,6 @@
 # GRP Image Classification
 
-This repository implements a supervised image-classification pipeline for the [Graphische Sammlung (GRP)](https://resource.swissartresearch.net/) at the GTA Archive, ETH Zurich. The pipeline classifies digitised cultural-heritage images into eight visual-type categories and is developed as part of the [Swiss Art Research Infrastructure (SARI)](https://swissartresearch.net/) project.
+This repository implements a supervised image-classification pipeline for the [gta Research Portal (GRP)](https://researchportal.gta.arch.ethz.ch/). The pipeline classifies digitised cultural-heritage images into eight visual-type categories and is developed as part of the [Swiss Art Research Infrastructure (SARI)](https://swissartresearch.net/) project.
 
 ## Classification taxonomy
 
