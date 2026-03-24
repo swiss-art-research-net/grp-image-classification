@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:aaao="https://ontology.swissartresearch.net/aaao/"
+   xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/type/classification/machine-produced-document">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>machine-produced document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5232300162315369</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 0003d64c2d876a7c1aedeff4453c180f6ffe2114.jpg as photograph</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0003d64c2d876a7c1aedeff4453c180f6ffe2114.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/photograph"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0003f5f2b1c12ba43ad6a65cf0539dd71672a631.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D14_Software"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 0000b5716da804138d730e6e937a184144c7ff10.jpg as machine-produced document</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0000b5716da804138d730e6e937a184144c7ff10.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/machine-produced-document"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>models/yolo11n-cls-grp.pt</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 00014dc2040e6ad41cb869372c31c441dc702567.jpg as drawing</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00014dc2040e6ad41cb869372c31c441dc702567.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/drawing"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Notebook used to train and evaluate the YOLO11n-cls model with Ultralytics 8.3.40, PyTorch 2.9.1, Python 3.12.10.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/type/project-lead-operator">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>Project lead and pipeline operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/actor/matteo-romanello">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/actor/matteo-romanello/name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 000446b8312ebd8e068c7fcab6e7c6ee3c3c2326.jpg as drawing</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/drawing"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>notebooks/train_yolo_classification_model.ipynb</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/participation/matteo-romanello">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/PC14_carried_out_by"/>
+    <crm:P02_has_range rdf:resource="https://resource.swissartresearch.net/sari-image-classification/actor/matteo-romanello"/>
+    <crm:P14.1_in_the_role_of rdf:resource="https://resource.swissartresearch.net/sari-image-classification/type/project-lead-operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D14_Software"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification">
+    <rdf:type rdf:resource="http://parthenos.d4science.org/CRMext/CRMpe.rdfs/PE35_Project"/>
+    <rdfs:label>SARI Image Classification</rdfs:label>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/url"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/description"/>
+    <crm:P01i_is_domain_of rdf:resource="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/participation/matteo-romanello"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0003d64c2d876a7c1aedeff4453c180f6ffe2114.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a.jpg as drawing</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/drawing"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 00038b0eb045ba3f911df0a7e6bcb462d21a40b5.jpg as drawing</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00038b0eb045ba3f911df0a7e6bcb462d21a40b5.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/drawing"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 0003f5f2b1c12ba43ad6a65cf0539dd71672a631.jpg as machine-produced document</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0003f5f2b1c12ba43ad6a65cf0539dd71672a631.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/machine-produced-document"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>grp-image-classification-dataset-v2</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalreading/model-training">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE17_Digital_Reading"/>
+    <rdfs:label>GRP Image Classification Model Training</rdfs:label>
+    <aaao:ZP12_ascribes_classification>provoc:ModelTraining</aaao:ZP12_ascribes_classification>
+    <crm:P9i_forms_part_of rdf:resource="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/model-training/description"/>
+    <crm:L23_used_software_or_firmware rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook"/>
+    <crm:L10_had_input rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2"/>
+    <crm:L10_had_input rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained"/>
+    <crm:L11_had_output rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp"/>
+    <crm:P20_had_specific_purpose rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Batch prediction over the full GRP image dataset using the fine-tuned YOLO model, writing ranked class confidences to CSV.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction">
+    <rdfs:label>GRP Image Classification Prediction</rdfs:label>
+    <aaao:ZP12_ascribes_classification>provoc:Prediction</aaao:ZP12_ascribes_classification>
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE17_Digital_Reading"/>
+    <crm:P9i_forms_part_of rdf:resource="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction/description"/>
+    <crm:L10_had_input rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp"/>
+    <crm:L10_had_input rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images"/>
+    <crm:L23_used_software_or_firmware rdf:resource="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script"/>
+    <crm:L11_had_output rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Machine-learning pipeline that classifies digitised GRP collection images into eight visual-type classes for SARI.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>run_dataset_classification.py</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9962814450263977</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3793495297431946</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/train-yolo-notebook/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>train_yolo_classification_model.ipynb</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>runs/classify/train42/results.csv</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 000494d4bcdac0c48d80be8e43b375ef26026aff.jpg as photograph</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000494d4bcdac0c48d80be8e43b375ef26026aff.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/photograph"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Script that runs resumable, fault-tolerant batch image classification and writes prediction and skipped-image CSV files.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0000b5716da804138d730e6e937a184144c7ff10.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9999082088470459</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>predictions_test.csv.skipped.csv</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>predictions_test.csv</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>results.csv</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 00041ea20b3314bb696f6fd4809732755fa1541b.jpg as handwritten document</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00041ea20b3314bb696f6fd4809732755fa1541b.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/handwritten-document"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/type/classification/collage">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>collage</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6">
+    <rdf:type rdf:resource="https://ontology.swissartresearch.net/aaao/ZE4_Classificatory_Status"/>
+    <rdfs:label>Classification of 000469915bc25d5aebf611265f0ad73370b281d6.jpg as collage</rdfs:label>
+    <aaao:ZP11_has_classificatory_subject rdf:resource="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000469915bc25d5aebf611265f0ad73370b281d6.jpg"/>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://resource.swissartresearch.net/type/classification/collage"/>
+    <aaao:ZP42i_was_intentionally_initiated_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalreading/prediction"/>
+    <aaao:ZP122_has_ascribed_dimension rdf:resource="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6/confidence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>clip_data/images</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>predictions_test.csv.skipped.csv</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalreading/model-training/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Fine-tuning of YOLO11n-cls on Roboflow dataset version 2 to produce the GRP 8-class model.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/training-results-csv/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Per-epoch metrics log from the training run, including losses and top-1/top-5 accuracies.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00014dc2040e6ad41cb869372c31c441dc702567.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>yolo11n-cls.pt</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>grp-image-classification-dataset-v2/</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>models/yolo11n-cls.pt</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/url">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>https://universe.roboflow.com/sariimageannotation/grp-image-classification</crm:P190_has_symbolic_content>
+    <aaao:ZP12_ascribes_classification rdf:resource="https://vocab.getty.edu/aat/300404630"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/type/classification/handwritten-document">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>handwritten document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9802083969116211</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Prediction output CSV with top-1, top-2, and top-3 classes and confidence scores per processed image.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9972713589668274</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5279586315155029</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-pretrained/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Pretrained YOLO11n classification model used as initialization for fine-tuning.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.getty.edu/aat/300404630">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>URL</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/type/classification/photograph">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>photograph</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000494d4bcdac0c48d80be8e43b375ef26026aff.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.48263052105903625</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9199972152709961</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/actor/matteo-romanello/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>Matteo Romanello</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>clip_data/images/</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-csv/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>predictions_test.csv</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326/confidence">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    <crm:P90_has_value rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.9999986886978149</crm:P90_has_value>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Local image directory containing the full GRP image snapshot used for inference.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/predictions-test-skipped-csv/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Skipped-image log produced during prediction for files that could not be decoded.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/project/sari-image-classification/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>SARI Image Classification</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/type/classification/drawing">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+    <rdfs:label>drawing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/software/run-dataset-classification-script/path">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    <crm:P190_has_symbolic_content>scripts/run_dataset_classification.py</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images/name"/>
+    <crm:P1_is_identified_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images/path"/>
+    <crm:P67i_is_referred_to_by rdf:resource="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/clip-data-images/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/dataset/grp-image-classification-v2/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Roboflow exported dataset version 2 (2,183 annotated images, 8 classes), exported 2026-02-13.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000469915bc25d5aebf611265f0ad73370b281d6.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00041ea20b3314bb696f6fd4809732755fa1541b.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00038b0eb045ba3f911df0a7e6bcb462d21a40b5.jpg">
+    <rdf:type rdf:resource="http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp/name">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation"/>
+    <crm:P190_has_symbolic_content>yolo11n-cls-grp.pt</crm:P190_has_symbolic_content>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://resource.swissartresearch.net/sari-image-classification/digitalobject/model/yolo11n-cls-grp/description">
+    <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    <crm:P190_has_symbolic_content>Fine-tuned YOLO11n classification model produced by training run train42.</crm:P190_has_symbolic_content>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,531 @@
+{
+  "@context": [
+    "https://linked.art/ns/v1/linked-art.json",
+    "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld",
+    {
+      "ex": "https://resource.swissartresearch.net/sari-image-classification/",
+      "classification_type": "https://resource.swissartresearch.net/type/classification/"
+    }
+  ],
+  "@graph": [
+    {
+      "id": "ex:project/sari-image-classification",
+      "type": "Project",
+      "_label": "SARI Image Classification",
+      "identified_by": [
+        {
+          "id": "ex:project/sari-image-classification/name",
+          "type": "Name",
+          "content": "SARI Image Classification"
+        },
+        {
+          "id": "ex:project/sari-image-classification/url",
+          "type": "Identifier",
+          "content": "https://universe.roboflow.com/sariimageannotation/grp-image-classification",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:project/sari-image-classification/description",
+        "type": "LinguisticObject",
+        "content": "Machine-learning pipeline that classifies digitised GRP collection images into eight visual-type classes for SARI."
+      },
+      "crm:P01i_is_domain_of": {
+        "id": "ex:project/sari-image-classification/participation/matteo-romanello",
+        "type": "crm:PC14_carried_out_by",
+        "crm:P02_has_range": {
+          "id": "ex:actor/matteo-romanello",
+          "type": "Actor",
+          "identified_by": {
+            "id": "ex:actor/matteo-romanello/name",
+            "type": "Name",
+            "content": "Matteo Romanello"
+          }
+        },
+        "crm:P14.1_in_the_role_of": {
+          "id": "ex:type/project-lead-operator",
+          "type": "Type",
+          "rdfs:label": "Project lead and pipeline operator"
+        }
+      }
+    },
+    {
+      "id": "ex:digitalreading/model-training",
+      "type": "DigitalReading",
+      "_label": "GRP Image Classification Model Training",
+      "classified_as": "provoc:ModelTraining",
+      "part_of": {
+        "id": "ex:project/sari-image-classification"
+      },
+      "referred_to_by": {
+        "id": "ex:digitalreading/model-training/description",
+        "type": "LinguisticObject",
+        "content": "Fine-tuning of YOLO11n-cls on Roboflow dataset version 2 to produce the GRP 8-class model."
+      },
+      "code": {
+        "id": "ex:software/train-yolo-notebook"
+      },
+      "input": [
+        {
+          "id": "ex:digitalobject/dataset/grp-image-classification-v2"
+        },
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-pretrained"
+        }
+      ],
+      "output": {
+        "id": "ex:digitalobject/model/yolo11n-cls-grp"
+      },
+      "log_file": {
+        "id": "ex:digitalobject/training-results-csv"
+      },
+      "has_dependency": {
+        "id": "ex:digitalreading/prediction",
+        "_label": "GRP Image Classification Prediction",
+        "classified_as": "provoc:Prediction"
+      }
+    },
+    {
+      "id": "ex:digitalreading/prediction",
+      "type": "DigitalReading",
+      "_label": "GRP Image Classification Prediction",
+      "classified_as": "provoc:Prediction",
+      "part_of": {
+        "id": "ex:project/sari-image-classification"
+      },
+      "referred_to_by": {
+        "id": "ex:digitalreading/prediction/description",
+        "type": "LinguisticObject",
+        "content": "Batch prediction over the full GRP image dataset using the fine-tuned YOLO model, writing ranked class confidences to CSV."
+      },
+      "model": {
+        "id": "ex:digitalobject/model/yolo11n-cls-grp"
+      },
+      "code": {
+        "id": "ex:software/run-dataset-classification-script"
+      },
+      "input": {
+        "id": "ex:digitalobject/dataset/clip-data-images"
+      },
+      "output": {
+        "id": "ex:digitalobject/predictions-test-csv"
+      },
+      "log_file": {
+        "id": "ex:digitalobject/predictions-test-skipped-csv"
+      }
+    },
+    {
+      "id": "ex:software/train-yolo-notebook",
+      "type": "Software",
+      "identified_by": [
+        {
+          "id": "ex:software/train-yolo-notebook/name",
+          "type": "Name",
+          "content": "train_yolo_classification_model.ipynb"
+        },
+        {
+          "id": "ex:software/train-yolo-notebook/path",
+          "type": "Identifier",
+          "content": "notebooks/train_yolo_classification_model.ipynb"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:software/train-yolo-notebook/description",
+        "type": "LinguisticObject",
+        "content": "Notebook used to train and evaluate the YOLO11n-cls model with Ultralytics 8.3.40, PyTorch 2.9.1, Python 3.12.10."
+      }
+    },
+    {
+      "id": "ex:software/run-dataset-classification-script",
+      "type": "Software",
+      "identified_by": [
+        {
+          "id": "ex:software/run-dataset-classification-script/name",
+          "type": "Name",
+          "content": "run_dataset_classification.py"
+        },
+        {
+          "id": "ex:software/run-dataset-classification-script/path",
+          "type": "Identifier",
+          "content": "scripts/run_dataset_classification.py"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:software/run-dataset-classification-script/description",
+        "type": "LinguisticObject",
+        "content": "Script that runs resumable, fault-tolerant batch image classification and writes prediction and skipped-image CSV files."
+      }
+    },
+    {
+      "id": "ex:digitalobject/dataset/grp-image-classification-v2",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/dataset/grp-image-classification-v2/name",
+          "type": "Name",
+          "content": "grp-image-classification-dataset-v2"
+        },
+        {
+          "id": "ex:digitalobject/dataset/grp-image-classification-v2/path",
+          "type": "Identifier",
+          "content": "grp-image-classification-dataset-v2/"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/dataset/grp-image-classification-v2/description",
+        "type": "LinguisticObject",
+        "content": "Roboflow exported dataset version 2 (2,183 annotated images, 8 classes), exported 2026-02-13."
+      }
+    },
+    {
+      "id": "ex:digitalobject/model/yolo11n-cls-pretrained",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-pretrained/name",
+          "type": "Name",
+          "content": "yolo11n-cls.pt"
+        },
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-pretrained/path",
+          "type": "Identifier",
+          "content": "models/yolo11n-cls.pt"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/model/yolo11n-cls-pretrained/description",
+        "type": "LinguisticObject",
+        "content": "Pretrained YOLO11n classification model used as initialization for fine-tuning."
+      }
+    },
+    {
+      "id": "ex:digitalobject/model/yolo11n-cls-grp",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-grp/name",
+          "type": "Name",
+          "content": "yolo11n-cls-grp.pt"
+        },
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-grp/path",
+          "type": "Identifier",
+          "content": "models/yolo11n-cls-grp.pt"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/model/yolo11n-cls-grp/description",
+        "type": "LinguisticObject",
+        "content": "Fine-tuned YOLO11n classification model produced by training run train42."
+      }
+    },
+    {
+      "id": "ex:digitalobject/training-results-csv",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/training-results-csv/name",
+          "type": "Name",
+          "content": "results.csv"
+        },
+        {
+          "id": "ex:digitalobject/training-results-csv/path",
+          "type": "Identifier",
+          "content": "runs/classify/train42/results.csv"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/training-results-csv/description",
+        "type": "LinguisticObject",
+        "content": "Per-epoch metrics log from the training run, including losses and top-1/top-5 accuracies."
+      }
+    },
+    {
+      "id": "ex:digitalobject/dataset/clip-data-images",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/dataset/clip-data-images/name",
+          "type": "Name",
+          "content": "clip_data/images"
+        },
+        {
+          "id": "ex:digitalobject/dataset/clip-data-images/path",
+          "type": "Identifier",
+          "content": "clip_data/images/"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/dataset/clip-data-images/description",
+        "type": "LinguisticObject",
+        "content": "Local image directory containing the full GRP image snapshot used for inference."
+      }
+    },
+    {
+      "id": "ex:digitalobject/predictions-test-csv",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/predictions-test-csv/name",
+          "type": "Name",
+          "content": "predictions_test.csv"
+        },
+        {
+          "id": "ex:digitalobject/predictions-test-csv/path",
+          "type": "Identifier",
+          "content": "predictions_test.csv"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/predictions-test-csv/description",
+        "type": "LinguisticObject",
+        "content": "Prediction output CSV with top-1, top-2, and top-3 classes and confidence scores per processed image."
+      }
+    },
+    {
+      "id": "ex:digitalobject/predictions-test-skipped-csv",
+      "type": "DigitalObject",
+      "identified_by": [
+        {
+          "id": "ex:digitalobject/predictions-test-skipped-csv/name",
+          "type": "Name",
+          "content": "predictions_test.csv.skipped.csv"
+        },
+        {
+          "id": "ex:digitalobject/predictions-test-skipped-csv/path",
+          "type": "Identifier",
+          "content": "predictions_test.csv.skipped.csv"
+        }
+      ],
+      "referred_to_by": {
+        "id": "ex:digitalobject/predictions-test-skipped-csv/description",
+        "type": "LinguisticObject",
+        "content": "Skipped-image log produced during prediction for files that could not be decoded."
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 0000b5716da804138d730e6e937a184144c7ff10.jpg as machine-produced document",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0000b5716da804138d730e6e937a184144c7ff10.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:machine-produced-document",
+        "type": "Type",
+        "_label": "machine-produced document"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10/confidence",
+        "type": "Dimension",
+        "value": 0.9972713589668274
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 00014dc2040e6ad41cb869372c31c441dc702567.jpg as drawing",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00014dc2040e6ad41cb869372c31c441dc702567.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:drawing",
+        "type": "Type",
+        "_label": "drawing"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567/confidence",
+        "type": "Dimension",
+        "value": 0.3793495297431946
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a.jpg as drawing",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:drawing",
+        "type": "Type",
+        "_label": "drawing"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a/confidence",
+        "type": "Dimension",
+        "value": 0.9999082088470459
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 00038b0eb045ba3f911df0a7e6bcb462d21a40b5.jpg as drawing",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00038b0eb045ba3f911df0a7e6bcb462d21a40b5.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:drawing",
+        "type": "Type",
+        "_label": "drawing"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5/confidence",
+        "type": "Dimension",
+        "value": 0.9962814450263977
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 0003d64c2d876a7c1aedeff4453c180f6ffe2114.jpg as photograph",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0003d64c2d876a7c1aedeff4453c180f6ffe2114.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:photograph",
+        "type": "Type",
+        "_label": "photograph"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114/confidence",
+        "type": "Dimension",
+        "value": 0.5279586315155029
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 0003f5f2b1c12ba43ad6a65cf0539dd71672a631.jpg as machine-produced document",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/0003f5f2b1c12ba43ad6a65cf0539dd71672a631.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:machine-produced-document",
+        "type": "Type",
+        "_label": "machine-produced document"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631/confidence",
+        "type": "Dimension",
+        "value": 0.5232300162315369
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 00041ea20b3314bb696f6fd4809732755fa1541b.jpg as handwritten document",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/00041ea20b3314bb696f6fd4809732755fa1541b.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:handwritten-document",
+        "type": "Type",
+        "_label": "handwritten document"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b/confidence",
+        "type": "Dimension",
+        "value": 0.9802083969116211
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 000446b8312ebd8e068c7fcab6e7c6ee3c3c2326.jpg as drawing",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:drawing",
+        "type": "Type",
+        "_label": "drawing"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326/confidence",
+        "type": "Dimension",
+        "value": 0.9999986886978149
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 000469915bc25d5aebf611265f0ad73370b281d6.jpg as collage",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000469915bc25d5aebf611265f0ad73370b281d6.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:collage",
+        "type": "Type",
+        "_label": "collage"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6/confidence",
+        "type": "Dimension",
+        "value": 0.48263052105903625
+      }
+    },
+    {
+      "id": "ex:classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff",
+      "type": "aaao:ZE4_Classificatory_Status",
+      "_label": "Classification of 000494d4bcdac0c48d80be8e43b375ef26026aff.jpg as photograph",
+      "has_target": {
+        "id": "file:///Users/mromanello/Documents/uzh-sari/sari-image-classification/clip_data/images/000494d4bcdac0c48d80be8e43b375ef26026aff.jpg",
+        "type": "DigitalObject"
+      },
+      "classified_as": {
+        "id": "classification_type:photograph",
+        "type": "Type",
+        "_label": "photograph"
+      },
+      "is_produced_by": {
+        "id": "ex:digitalreading/prediction"
+      },
+      "confidence": {
+        "id": "ex:classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff/confidence",
+        "type": "Dimension",
+        "value": 0.9199972152709961
+      }
+    }
+  ]
+}
