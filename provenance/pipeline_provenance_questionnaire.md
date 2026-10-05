@@ -44,7 +44,7 @@
 - What is the overall pipeline type/category?
   - Answer: Image classification (supervised learning)
 - From which file(s) can the pipeline-level activity timing be derived?
-  - Answer: `runs/classify/train42/results.csv` (training timing), `predictions_test.csv` file modification timestamps, and git history of repository files.
+  - Answer: Save dates embedded in the YOLO checkpoints (`runs/classify/train42/weights/last.pt`, `models/yolo11n-cls-grp.pt`), elapsed training time in `runs/classify/train42/results.csv`, and git history of repository files (first commit of `data/output/predictions_test.csv`).
 - What is the ordered list of steps in execution sequence?
   - Answer:
     1. **ImageDownload** — Download images from the IIIF server
@@ -206,9 +206,9 @@
 
 #### B. Time and context
 - From which file(s) can this step's start time be derived?
-  - Answer: `runs/classify/train42/results.csv` (epoch 1 timestamp: ~34 seconds from start).
+  - Answer: `2026-02-13T10:09:06+01:00` (approximate). Derived by subtracting the elapsed training time logged in `runs/classify/train42/results.csv` (1517.9 seconds at epoch 44) from the save `date` embedded in `runs/classify/train42/weights/last.pt`. Epoch 1 finished ~34 seconds after start.
 - From which file(s) can this step's end time be derived?
-  - Answer: `runs/classify/train42/results.csv` (last epoch, epoch 44, timestamp: ~1518 seconds, i.e. ~25 minutes total training time). Early stopping triggered at epoch 44 (patience=20, best result around epoch 24).
+  - Answer: `2026-02-13T10:34:24+01:00`, the save `date` embedded in `runs/classify/train42/weights/last.pt` (written at the end of epoch 44, ~25 minutes total training time). Early stopping triggered at epoch 44 (patience=20, best result around epoch 24). Checkpoint dates carry no timezone; CET (`+01:00`) is assumed. File-system timestamps are not usable: they were reset when the repository was copied (2026-03-24).
 - Which project does this step belong to?
   - Answer: SARI Image Classification
 - Which previous step(s) must complete before this one?
@@ -289,9 +289,9 @@
 
 #### B. Time and context
 - From which file(s) can this step's start time be derived?
-  - Answer: File-system creation/modification timestamp of `predictions_test.csv`.
+  - Answer: No exact start time is recorded. Earliest possible start (`begin_of_the_begin`): `2026-02-13T10:47:26+01:00`, the save `date` embedded in the final model `models/yolo11n-cls-grp.pt`, which the prediction run used.
 - From which file(s) can this step's end time be derived?
-  - Answer: File-system modification timestamp of `predictions_test.csv` (final write after processing all images).
+  - Answer: No exact end time is recorded. Latest possible end (`end_of_the_end`): `2026-03-24T10:14:33+01:00`, the date of git commit `a819865`, which first added `data/output/predictions_test.csv`. File-system timestamps of `predictions_test.csv` are not usable: they were reset when the repository was copied. Each classification inherits this time-span from the prediction run.
 - Which project does this step belong to?
   - Answer: SARI Image Classification
 - Which previous step(s) must complete before this one?

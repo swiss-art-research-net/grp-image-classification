@@ -59,6 +59,12 @@
       "type": "DigitalReading",
       "_label": "GRP Image Classification Model Training",
       "classified_as": "provoc:ModelTraining",
+      "timespan": {
+        "id": "ex:digitalreading/model-training/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:09:06+01:00",
+        "end_of_the_end": "2026-02-13T10:34:24+01:00"
+      },
       "part_of": {
         "id": "ex:project/sari-image-classification"
       },
@@ -96,6 +102,12 @@
       "type": "DigitalReading",
       "_label": "GRP Image Classification Prediction",
       "classified_as": "provoc:Prediction",
+      "timespan": {
+        "id": "ex:digitalreading/prediction/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
+      },
       "part_of": {
         "id": "ex:project/sari-image-classification"
       },
@@ -325,6 +337,12 @@
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
       },
+      "timespan": {
+        "id": "ex:classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
+      },
       "confidence": {
         "id": "ex:classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10/confidence",
         "type": "Dimension",
@@ -346,6 +364,12 @@
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
+      },
+      "timespan": {
+        "id": "ex:classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
       },
       "confidence": {
         "id": "ex:classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567/confidence",
@@ -369,6 +393,12 @@
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
       },
+      "timespan": {
+        "id": "ex:classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
+      },
       "confidence": {
         "id": "ex:classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a/confidence",
         "type": "Dimension",
@@ -390,6 +420,12 @@
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
+      },
+      "timespan": {
+        "id": "ex:classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
       },
       "confidence": {
         "id": "ex:classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5/confidence",
@@ -413,6 +449,12 @@
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
       },
+      "timespan": {
+        "id": "ex:classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
+      },
       "confidence": {
         "id": "ex:classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114/confidence",
         "type": "Dimension",
@@ -434,6 +476,12 @@
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
+      },
+      "timespan": {
+        "id": "ex:classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
       },
       "confidence": {
         "id": "ex:classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631/confidence",
@@ -457,6 +505,12 @@
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
       },
+      "timespan": {
+        "id": "ex:classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
+      },
       "confidence": {
         "id": "ex:classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b/confidence",
         "type": "Dimension",
@@ -478,6 +532,12 @@
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
+      },
+      "timespan": {
+        "id": "ex:classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
       },
       "confidence": {
         "id": "ex:classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326/confidence",
@@ -501,6 +561,12 @@
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
       },
+      "timespan": {
+        "id": "ex:classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
+      },
       "confidence": {
         "id": "ex:classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6/confidence",
         "type": "Dimension",
@@ -522,6 +588,12 @@
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
+      },
+      "timespan": {
+        "id": "ex:classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff/timespan",
+        "type": "TimeSpan",
+        "begin_of_the_begin": "2026-02-13T10:47:26+01:00",
+        "end_of_the_end": "2026-03-24T10:14:33+01:00"
       },
       "confidence": {
         "id": "ex:classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff/confidence",
