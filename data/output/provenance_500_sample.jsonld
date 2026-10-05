@@ -85,6 +85,7 @@
       },
       "has_dependency": {
         "id": "ex:digitalreading/prediction",
+        "type": "DigitalReading",
         "_label": "GRP Image Classification Prediction",
         "classified_as": "provoc:Prediction"
       }
