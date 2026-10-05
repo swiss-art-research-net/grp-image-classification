@@ -145,6 +145,16 @@
           "id": "ex:software/train-yolo-notebook/path",
           "type": "Identifier",
           "content": "notebooks/train_yolo_classification_model.ipynb"
+        },
+        {
+          "id": "ex:software/train-yolo-notebook/url",
+          "type": "Identifier",
+          "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/notebooks/train_yolo_classification_model.ipynb",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -166,6 +176,16 @@
           "id": "ex:software/run-dataset-classification-script/path",
           "type": "Identifier",
           "content": "scripts/run_dataset_classification.py"
+        },
+        {
+          "id": "ex:software/run-dataset-classification-script/url",
+          "type": "Identifier",
+          "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/scripts/run_dataset_classification.py",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -187,6 +207,16 @@
           "id": "ex:digitalobject/dataset/grp-image-classification-v2/path",
           "type": "Identifier",
           "content": "grp-image-classification-dataset-v2/"
+        },
+        {
+          "id": "ex:digitalobject/dataset/grp-image-classification-v2/url",
+          "type": "Identifier",
+          "content": "https://universe.roboflow.com/sariimageannotation/grp-image-classification/dataset/2",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -208,6 +238,16 @@
           "id": "ex:digitalobject/model/yolo11n-cls-pretrained/path",
           "type": "Identifier",
           "content": "models/yolo11n-cls.pt"
+        },
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-pretrained/url",
+          "type": "Identifier",
+          "content": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-cls.pt",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -229,6 +269,16 @@
           "id": "ex:digitalobject/model/yolo11n-cls-grp/path",
           "type": "Identifier",
           "content": "models/yolo11n-cls-grp.pt"
+        },
+        {
+          "id": "ex:digitalobject/model/yolo11n-cls-grp/url",
+          "type": "Identifier",
+          "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/models/yolo11n-cls-grp.pt",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -250,6 +300,16 @@
           "id": "ex:digitalobject/training-results-csv/path",
           "type": "Identifier",
           "content": "runs/classify/train42/results.csv"
+        },
+        {
+          "id": "ex:digitalobject/training-results-csv/url",
+          "type": "Identifier",
+          "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/runs/classify/train42/results.csv",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -271,6 +331,16 @@
           "id": "ex:digitalobject/dataset/clip-data-images/path",
           "type": "Identifier",
           "content": "clip_data/images/"
+        },
+        {
+          "id": "ex:digitalobject/dataset/clip-data-images/url",
+          "type": "Identifier",
+          "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/clip_data/images.csv",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
@@ -291,7 +361,17 @@
         {
           "id": "ex:digitalobject/predictions-test-csv/path",
           "type": "Identifier",
-          "content": "predictions_test.csv"
+          "content": "data/output/predictions_test.csv"
+        },
+        {
+          "id": "ex:digitalobject/predictions-test-csv/url",
+          "type": "Identifier",
+          "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/data/output/predictions_test.csv",
+          "classified_as": {
+            "id": "https://vocab.getty.edu/aat/300404630",
+            "type": "Type",
+            "rdfs:label": "URL"
+          }
         }
       ],
       "referred_to_by": {
