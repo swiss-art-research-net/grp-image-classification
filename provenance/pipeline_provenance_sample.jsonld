@@ -4,7 +4,6 @@
     "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld",
     {
       "ex": "https://resource.swissartresearch.net/sari-image-classification/",
-      "classification_type": "https://resource.swissartresearch.net/type/classification/",
       "provoc": "https://vocabulary.swissartresearch.net/provolone/"
     }
   ],
@@ -13,10 +12,20 @@
       "id": "ex:project/sari-image-classification",
       "type": "Project",
       "_label": "SARI Image Classification",
+      "classified_as": {
+        "id": "provoc:ImageClassification",
+        "type": "Type",
+        "_label": "Image Classification"
+      },
       "identified_by": [
         {
           "id": "ex:project/sari-image-classification/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "SARI Image Classification"
         },
         {
@@ -24,9 +33,9 @@
           "type": "Identifier",
           "content": "https://universe.roboflow.com/sariimageannotation/grp-image-classification",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -44,13 +53,18 @@
           "identified_by": {
             "id": "ex:actor/matteo-romanello/name",
             "type": "Name",
+            "classified_as": {
+              "id": "http://vocab.getty.edu/aat/300404670",
+              "type": "Type",
+              "_label": "Primary Name"
+            },
             "content": "Matteo Romanello"
           }
         },
         "crm:P14.1_in_the_role_of": {
           "id": "ex:type/project-lead-operator",
           "type": "Type",
-          "rdfs:label": "Project lead and pipeline operator"
+          "_label": "Project lead and pipeline operator"
         }
       }
     },
@@ -58,7 +72,11 @@
       "id": "ex:digitalreading/model-training",
       "type": "DigitalReading",
       "_label": "GRP Image Classification Model Training",
-      "classified_as": "provoc:ModelTraining",
+      "classified_as": {
+        "id": "provoc:Training",
+        "type": "Type",
+        "_label": "Training"
+      },
       "timespan": {
         "id": "ex:digitalreading/model-training/timespan",
         "type": "TimeSpan",
@@ -93,15 +111,25 @@
       "has_dependency": {
         "id": "ex:digitalreading/prediction",
         "type": "DigitalReading",
-        "_label": "GRP Image Classification Prediction",
-        "classified_as": "provoc:Prediction"
+        "_label": "GRP Image Classification Prediction"
       }
     },
     {
       "id": "ex:digitalreading/prediction",
       "type": "DigitalReading",
       "_label": "GRP Image Classification Prediction",
-      "classified_as": "provoc:Prediction",
+      "classified_as": [
+        {
+          "id": "provoc:Prediction",
+          "type": "Type",
+          "_label": "Prediction"
+        },
+        {
+          "id": "provoc:ImageClassification",
+          "type": "Type",
+          "_label": "Image Classification"
+        }
+      ],
       "timespan": {
         "id": "ex:digitalreading/prediction/timespan",
         "type": "TimeSpan",
@@ -139,6 +167,11 @@
         {
           "id": "ex:software/train-yolo-notebook/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "train_yolo_classification_model.ipynb"
         },
         {
@@ -151,9 +184,9 @@
           "type": "Identifier",
           "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/notebooks/train_yolo_classification_model.ipynb",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -170,6 +203,11 @@
         {
           "id": "ex:software/run-dataset-classification-script/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "run_dataset_classification.py"
         },
         {
@@ -182,9 +220,9 @@
           "type": "Identifier",
           "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/scripts/run_dataset_classification.py",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -201,6 +239,11 @@
         {
           "id": "ex:digitalobject/dataset/grp-image-classification-v2/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "grp-image-classification-dataset-v2"
         },
         {
@@ -213,9 +256,9 @@
           "type": "Identifier",
           "content": "https://universe.roboflow.com/sariimageannotation/grp-image-classification/dataset/2",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -232,6 +275,11 @@
         {
           "id": "ex:digitalobject/model/yolo11n-cls-pretrained/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "yolo11n-cls.pt"
         },
         {
@@ -244,9 +292,9 @@
           "type": "Identifier",
           "content": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-cls.pt",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -263,6 +311,11 @@
         {
           "id": "ex:digitalobject/model/yolo11n-cls-grp/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "yolo11n-cls-grp.pt"
         },
         {
@@ -275,9 +328,9 @@
           "type": "Identifier",
           "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/models/yolo11n-cls-grp.pt",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -294,6 +347,11 @@
         {
           "id": "ex:digitalobject/training-results-csv/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "results.csv"
         },
         {
@@ -306,9 +364,9 @@
           "type": "Identifier",
           "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/runs/classify/train42/results.csv",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -325,6 +383,11 @@
         {
           "id": "ex:digitalobject/dataset/clip-data-images/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "clip_data/images"
         },
         {
@@ -337,9 +400,9 @@
           "type": "Identifier",
           "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/clip_data/images.csv",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -356,6 +419,11 @@
         {
           "id": "ex:digitalobject/predictions-test-csv/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "predictions_test.csv"
         },
         {
@@ -368,9 +436,9 @@
           "type": "Identifier",
           "content": "https://github.com/swiss-art-research-net/grp-image-classification/blob/62726f9ebf57517997f921f8a5fb103e357842e2/data/output/predictions_test.csv",
           "classified_as": {
-            "id": "https://vocab.getty.edu/aat/300404630",
+            "id": "http://vocab.getty.edu/aat/300404630",
             "type": "Type",
-            "rdfs:label": "URL"
+            "_label": "URL"
           }
         }
       ],
@@ -387,6 +455,11 @@
         {
           "id": "ex:digitalobject/predictions-test-skipped-csv/name",
           "type": "Name",
+          "classified_as": {
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+          },
           "content": "predictions_test.csv.skipped.csv"
         },
         {
@@ -410,9 +483,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:machine-produced-document",
+        "id": "provoc:01M5Q7C7MDDBC67WDGQVNN3AD5",
         "type": "Type",
-        "_label": "machine-produced document"
+        "_label": "Machine-produced document"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -426,6 +499,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/0000b5716da804138d730e6e937a184144c7ff10/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.9972713589668274
       }
     },
@@ -438,9 +516,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:drawing",
+        "id": "provoc:01M5Q7BNP95EXYBW522HEGX19V",
         "type": "Type",
-        "_label": "drawing"
+        "_label": "Drawing"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -454,6 +532,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/00014dc2040e6ad41cb869372c31c441dc702567/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.3793495297431946
       }
     },
@@ -466,9 +549,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:drawing",
+        "id": "provoc:01M5Q7BNP95EXYBW522HEGX19V",
         "type": "Type",
-        "_label": "drawing"
+        "_label": "Drawing"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -482,6 +565,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/0001c888cd8bcaf90cb4b0b5eaec74eb5c00fe9a/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.9999082088470459
       }
     },
@@ -494,9 +582,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:drawing",
+        "id": "provoc:01M5Q7BNP95EXYBW522HEGX19V",
         "type": "Type",
-        "_label": "drawing"
+        "_label": "Drawing"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -510,6 +598,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/00038b0eb045ba3f911df0a7e6bcb462d21a40b5/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.9962814450263977
       }
     },
@@ -522,9 +615,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:photograph",
+        "id": "provoc:01M5Q7CH6JM2PCD1KVYAZYT5EQ",
         "type": "Type",
-        "_label": "photograph"
+        "_label": "Photograph"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -538,6 +631,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/0003d64c2d876a7c1aedeff4453c180f6ffe2114/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.5279586315155029
       }
     },
@@ -550,9 +648,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:machine-produced-document",
+        "id": "provoc:01M5Q7C7MDDBC67WDGQVNN3AD5",
         "type": "Type",
-        "_label": "machine-produced document"
+        "_label": "Machine-produced document"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -566,6 +664,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/0003f5f2b1c12ba43ad6a65cf0539dd71672a631/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.5232300162315369
       }
     },
@@ -578,9 +681,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:handwritten-document",
+        "id": "provoc:01M5Q7BZ01GW0YCZFZTFDWAC4W",
         "type": "Type",
-        "_label": "handwritten document"
+        "_label": "Handwritten document"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -594,6 +697,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/00041ea20b3314bb696f6fd4809732755fa1541b/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.9802083969116211
       }
     },
@@ -606,9 +714,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:drawing",
+        "id": "provoc:01M5Q7BNP95EXYBW522HEGX19V",
         "type": "Type",
-        "_label": "drawing"
+        "_label": "Drawing"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -622,6 +730,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/000446b8312ebd8e068c7fcab6e7c6ee3c3c2326/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.9999986886978149
       }
     },
@@ -634,9 +747,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:collage",
+        "id": "provoc:01M5Q78M0VGCSBQB1R3HS09BD1",
         "type": "Type",
-        "_label": "collage"
+        "_label": "Collage"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -650,6 +763,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/000469915bc25d5aebf611265f0ad73370b281d6/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.48263052105903625
       }
     },
@@ -662,9 +780,9 @@
         "type": "DigitalObject"
       },
       "classified_as": {
-        "id": "classification_type:photograph",
+        "id": "provoc:01M5Q7CH6JM2PCD1KVYAZYT5EQ",
         "type": "Type",
-        "_label": "photograph"
+        "_label": "Photograph"
       },
       "is_produced_by": {
         "id": "ex:digitalreading/prediction"
@@ -678,6 +796,11 @@
       "confidence": {
         "id": "ex:classificatorystatus/000494d4bcdac0c48d80be8e43b375ef26026aff/confidence",
         "type": "Dimension",
+        "classified_as": {
+          "id": "provoc:ConfidenceScore",
+          "type": "Type",
+          "_label": "Confidence score"
+        },
         "value": 0.9199972152709961
       }
     }

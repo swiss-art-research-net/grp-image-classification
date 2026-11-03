@@ -11,7 +11,6 @@ import argparse
 import csv
 import itertools
 import json
-import re
 import sys
 from pathlib import Path
 from typing import Any, Iterable, TypeVar
@@ -32,6 +31,26 @@ def tqdm(iterable: Iterable[T], **kwargs: Any) -> Iterable[T]:
 
 PREDICTION_READING_ID = "ex:digitalreading/prediction"
 TIMESPAN_BOUNDS = ("begin_of_the_begin", "end_of_the_end")
+
+# GRP image classification taxonomy in the PROVOLONE vocabulary
+# (https://vocabulary.swissartresearch.net/provolone). Concept IRIs are opaque
+# identifiers and cannot be derived from labels.
+GRP_CLASS_CONCEPTS: dict[str, tuple[str, str]] = {
+    "collage": ("provoc:01M5Q78M0VGCSBQB1R3HS09BD1", "Collage"),
+    "drawing": ("provoc:01M5Q7BNP95EXYBW522HEGX19V", "Drawing"),
+    "handwritten document": ("provoc:01M5Q7BZ01GW0YCZFZTFDWAC4W", "Handwritten document"),
+    "machine-produced document": ("provoc:01M5Q7C7MDDBC67WDGQVNN3AD5", "Machine-produced document"),
+    "painting": ("provoc:01M5Q7CCC1EF24AYTV8T27XW0C", "Painting"),
+    "photograph": ("provoc:01M5Q7CH6JM2PCD1KVYAZYT5EQ", "Photograph"),
+    "print": ("provoc:01M5Q7CMPEBFT00G4CKWX0G7BG", "Print"),
+    "unknown": ("provoc:01M5Q7CRG38K9J05GABGFJ7VYP", "Unknown"),
+}
+
+CONFIDENCE_SCORE_TYPE = {
+    "id": "provoc:ConfidenceScore",
+    "type": "Type",
+    "_label": "Confidence score",
+}
 
 DESCRIPTION_TEMPLATE = """The image `{image_file_name}` was classified as a **{top1_class}** with a confidence of **{top1_pct:.2f}%**.
 
@@ -166,18 +185,25 @@ def load_images_csv(path: Path) -> dict[str, str]:
     return by_id
 
 
-def slugify_class_label(label: str) -> str:
-    """Turn a human-readable class label into a slug for ``classification_type:`` IRIs.
+def class_concept(label: str) -> tuple[str, str]:
+    """Look up the PROVOLONE concept for a predicted class label.
 
-    Lowercases, replaces non-alphanumeric runs with hyphens, and strips edges.
-    Empty or whitespace-only input becomes the string ``unknown``.
+    Args:
+        label: Class name as written by the model (e.g. ``machine-produced document``).
 
     Returns:
-        A slug such as ``machine-produced-document`` for use in ``classification_type:`` ids.
+        Tuple of (concept IRI, preferred label).
+
+    Raises:
+        SystemExit: If the label is not part of the GRP image classification taxonomy.
     """
-    s = label.lower().strip()
-    s = re.sub(r"[^a-z0-9]+", "-", s)
-    return s.strip("-") or "unknown"
+    concept = GRP_CLASS_CONCEPTS.get(label.lower().strip())
+    if concept is None:
+        raise SystemExit(
+            f"Class {label!r} is not in the GRP image classification taxonomy; "
+            f"expected one of {sorted(GRP_CLASS_CONCEPTS)}."
+        )
+    return concept
 
 
 def load_template_graph(path: Path) -> tuple[list[Any], dict[str, Any]]:
@@ -255,7 +281,7 @@ def build_classificatory_status(
     Returns:
         A JSON-LD object dict ready to append to ``@graph``.
     """
-    slug = slugify_class_label(top1_class)
+    class_iri, class_label = class_concept(top1_class)
     pct = top1_confidence * 100.0
     content = DESCRIPTION_TEMPLATE.format(
         image_file_name=image_file_name,
@@ -272,9 +298,9 @@ def build_classificatory_status(
             "type": "DigitalObject",
         },
         "classified_as": {
-            "id": f"classification_type:{slug}",
+            "id": class_iri,
             "type": "Type",
-            "_label": top1_class,
+            "_label": class_label,
         },
         "is_produced_by": {
             "id": PREDICTION_READING_ID,
@@ -290,6 +316,7 @@ def build_classificatory_status(
         "confidence": {
             "id": f"ex:classificatorystatus/{stem}/confidence",
             "type": "Dimension",
+            "classified_as": dict(CONFIDENCE_SCORE_TYPE),
             "value": top1_confidence,
         },
         "referred_to_by": {
