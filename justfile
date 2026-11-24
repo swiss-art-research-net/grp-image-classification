@@ -24,6 +24,9 @@ template_jsonld := "provenance/pipeline_provenance_sample.jsonld"
 template_rdfxml := "provenance/pipeline_provenance_sample.rdf"
 jsonld_out      := "data/output/provenance.jsonld"
 rdfxml_out      := "data/output/provenance.rdf"
+trig_out        := "data/output/provenance.trig"
+graph_base      := "http://data.gta.arch.ethz.ch/provolone/grp-image-classification"
+graph_name      := ""
 training_run    := "train42"
 limit           := ""
 
@@ -57,6 +60,19 @@ rdfxml input=jsonld_out output=rdfxml_out:
     {{ python }} scripts/convert_jsonld_to_rdfxml.py \
         --input "{{ input }}" \
         --output "{{ output }}"
+
+# Package JSON-LD provenance as a TriG named graph for ingestion
+# Graph IRI = graph_base[/graph_name]; override with e.g.
+#   just --set graph_base http://example.org/g trig
+trig input=jsonld_out output=trig_out:
+    {{ python }} scripts/package_provenance_trig.py \
+        --input "{{ input }}" \
+        --output "{{ output }}" \
+        --graph-base "{{ graph_base }}" \
+        --graph-name "{{ graph_name }}"
+
+# Package the 500-prediction sample as TriG
+trig-sample: (trig sample_jsonld "data/output/provenance_500_sample.trig")
 
 # Convert provenance/pipeline_provenance_sample.jsonld to RDF/XML
 rdfxml-sample: (rdfxml template_jsonld template_rdfxml)

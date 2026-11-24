@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+
+# Downloaded JSON-LD contexts (scripts/package_provenance_trig.py)
+.cache/
+
+# Full-size generated provenance (hundreds of MB); regenerate with `just provenance-all` / `just trig`
+/data/output/provenance.jsonld
+/data/output/provenance.rdf
+/data/output/provenance.trig
